@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Rubik&display=swap');
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 1s;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+    height: 60px;
+}
+
+.logo a {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900 !important;
+    font-size: 30px;
+    text-decoration: none;
+    color: #3f0d0c !important;
+}
+
+.navbarcss {
+    padding: 0 !important;
+    background-color: #d8d0c5;
+}
+
+.menu-item a {
+    color: #3f0d0c !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 30px !important;
+}
+
+.menu-item a:hover {
+    border-bottom: #000 solid;
+}
+
+.pro_cart {
+    margin-left: 200px;
+}
+
+.pro_cart a {
+    color: #3f0d0c;
+    margin-left: 30px;
+}
+
+
+/* .menu-item div {
+    height: 60px;
+} */
+
+.img_register {
+    height: 500px;
+    width: 500px;
+}
+
+.login_form {
+    margin-top: 10%;
+}
+
+.email,
+.password {
+    background-color: #E5E5E5;
+}
+
+.login_button {
+    background-color: #3f0d0c;
+}
+
+.top_banner {
+    display: flex;
+    justify-content: center;
+}
+
+.top_banner img {
+    object-fit: cover;
+    width: 90%;
+    height: 350px;
+    margin: 100px 50px;
+}
+
+.side_banner {
+    display: flex;
+    justify-content: center;
+}
+
+.left_banner img {
+    object-fit: cover;
+    width: 700px;
+    height: 700px;
+    margin: 100px 100px;
+}
+
+.right_banner {
+    margin-left: 100p;
+}
+
+.right_banner img {
+    object-fit: cover;
+    width: 900px;
+    height: 900px;
+    margin: 0 200px;
+}
