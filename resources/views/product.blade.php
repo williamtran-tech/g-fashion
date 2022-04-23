@@ -5,7 +5,7 @@
         {!!$product->name!!}
     </h1>    
     <p>
-        {{$product->category->name}}
+        <a href="/categories/{{$product->category->slug}}">{{$product->category->name}}</a>
     </p>
     <h2>
         {{$product->price}}
