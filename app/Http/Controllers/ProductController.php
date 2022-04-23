@@ -13,9 +13,9 @@ class ProductController extends Controller
             'products' => Product::all()]);
     }
 
-    public function productDetails($id){
+    public function productDetails(Product $product){
         return view('product', [
-            'product' => Product::findOrFail($id)
+            'product' => $product
          ]);
     }
 }

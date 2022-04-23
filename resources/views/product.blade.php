@@ -4,9 +4,9 @@
     <h1>
         {!!$product->name!!}
     </h1>    
-    <h2>
-        {{$product->category}}
-    </h2>
+    <p>
+        {{$product->category->name}}
+    </p>
     <h2>
         {{$product->price}}
     </h2>
