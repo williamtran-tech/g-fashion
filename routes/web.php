@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
@@ -18,6 +19,12 @@ use App\Http\Controllers\ProductController;
 // Route::get('products', [ProductController::class, 'allProducts']);
 
 Route::get('products/{product:slug}', [ProductController::class, 'productDetails']); //Product::where ('slug', $product)->first() | firstOrFail()
+
+Route::get('categories/{category:slug}', function (Category $category){
+    return view('products', [
+        'products' =>$category->products
+    ]);
+});
 
 Route::get('/', function () {
     return view('landing_page');
