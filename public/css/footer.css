@@ -1,0 +1,325 @@
+/*====================================*/
+/*FOOTER FULL NAVIGATION 1440*/
+/*====================================*/
+
+.footer_xl{
+	overflow-x: hidden;
+}
+
+/*================*/
+/*TOP OF FOOTER*/
+.top_footer{
+	width: 100vw;
+	padding-top: 140px;
+	height:  140px;
+	font-family: Raleway, sans-serif;
+	font-weight: 500;
+}
+
+
+/*Back to Top button*/
+.to_top a {
+	text-decoration: none;
+	color: #849792;
+	font-size: 16px;
+
+}
+.to_top i {font-size: 36px;}
+
+
+/*Chat with Us - hidden by default*/
+
+.chat_button{
+	position: fixed;
+	z-index: 9;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	height: 48px;
+	background-color: #B0BAB7;
+	border: none;
+	border-top-left-radius: 2%;
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+	.chat_button:hover {
+		background-color: #C8CDCB;
+	}
+
+.chat_button i {
+	font-size: 18px;
+}
+
+.chat_popup {
+	display: none;
+	position: fixed;
+	z-index: 9;
+	right: 0;
+	bottom: 0;
+}
+
+.chat_header {
+	font-size: 24px;
+	font-weight: 600;
+	color: #849792;
+}
+
+.chatbox {
+	width: 300px;
+  	padding: 15px;
+  	border-top-left-radius: 2%;
+  	background-color: rgba(255,255,255,0.9);
+  	border: 0.5px solid #849792;
+}
+
+.chatbox textarea {
+  	width: 100%;
+  	padding: 15px;
+  	margin: 5px 0 22px 0;
+  	border: none;
+  	background: #f1f1f1;
+  	resize: none;
+  	min-height: 200px;
+}
+
+	.chatbox  textarea:focus {
+	  	background-color: #E6EAE8;
+	  	outline: none;
+	}
+
+.chatbox .btn {
+	  background-color: #849792;
+	  color: white;
+	  letter-spacing: 3px;
+	  padding: 10px 36px;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	  margin-bottom:10px;
+}
+	.chatbox .btn:hover {
+		filter: brightness(1.2);
+	}
+
+.chatbox i {
+	color: #5D5B58;
+	font-size: 21px;
+	cursor: pointer;
+}
+
+
+
+/*================*/
+/*MID OF FOOTER*/
+
+.mid_footer {
+	width: 100vw;
+	background-color: #EAE7E2;
+	padding: 60px 0 45px 0;
+	text-align: center;
+	color: #849792;
+}
+
+
+.mid_footer h3 {
+	font-family: 'Merriweather', serif;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom:  36px;
+}
+
+
+.mid_footer p {
+	font-family: Raleway, sans-serif;
+	font-size: 21px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 31.5px;
+	margin-bottom:  36px;
+}
+
+
+
+/*================*/
+/*END OF FOOTER*/
+
+.end_footer {
+	background-color: #849792;
+	width: 100vw;
+	padding: 72px 72px 72px 48px;
+}
+
+.end_footer .nav-link, .end_footer .foot_text, .end_footer .foot_icon, .end_footer p{
+	color: white;
+	font-family: Raleway, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+	.end_footer .nav-link:hover {
+		filter: brightness(0.8);
+	}
+
+.end_footer .foot_header p{
+	letter-spacing: 1px;
+	font-family: 'Merriweather', serif;
+	font-weight: 700;
+	color: #ECE4D1;
+	font-size: 18px;
+}
+
+
+.end_footer .foot_text {
+	line-height: 40px;
+	letter-spacing: 0.5px;
+}
+
+.end_footer .foot_icon i {
+	font-size: 21px;
+	cursor: pointer;
+}
+
+	.end_footer .foot_icon_b i {
+	font-size: 27px;
+}
+
+/*Hide mini footer*/
+.footer_sm_wrapper {display: none;}
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* Small devices (landscape phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 992px) {  
+
+
+/*====================================*/
+/*FOOTER MINI NAVIGATION 320*/
+/*====================================*/
+.footer_xl {display: none;}
+
+.footer_sm_wrapper {
+	display: block;
+	background-color: transparent;
+	padding: 0;
+	
+}
+
+.footer_sm {
+	background-color: #849792;
+	padding: 0;
+	margin: 0;
+	padding: 36px 24px 24px 24px;
+}
+
+.footer_sm .card, .footer_sm .card-header, .footer_sm .card-body,
+.footer_sm .navbar, .footer_sm .navbar-nav, .footer_sm .nav-item,
+.footer_sm .card-link, .footer_sm .collapse, .footer_sm .nav-link
+{
+	background-color: #849792;
+	border: none;
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+.footer_sm .nav-link, .footer_sm .contact, .footer_sm_end, .footer_sm_end p {
+	color: white;
+	padding: 4px 0;
+	font-family: Raleway, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+	.footer_sm .contact .nav-item{
+		padding: 5px 0;
+	}
+
+.footer_sm .foot_header {
+	letter-spacing: 1px;
+	font-family: 'Merriweather', serif;
+	font-weight: 600;
+	color: #ECE4D1;
+	font-size: 16px;
+}
+
+
+.footer_sm_end i {font-size: 24px;}
+
+.footer_sm .foot_icon i {
+	font-size: 18px;
+	color: white;
+	margin-right: 14px;
+}
+
+.minus_margin_top {margin-top: -5px;}
+
+
+
+
+/*mini chat button & back to top*/
+
+.mini_to_top{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	text-decoration: none;
+	color: #849792;
+	font-size: 14px;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+}
+
+.chat_button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	bottom: 10vw;
+	right: 16px;
+}
+
+.chatbox {
+	width: 100%;
+	border-radius:1%;
+}
+
+
+
+.mini_to_top a {
+	text-decoration: none;
+	color: #849792;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+

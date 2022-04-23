@@ -1,0 +1,322 @@
+.header {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #C1916E;
+    letter-spacing: 2px;
+}
+
+.add_top_margin {
+    margin-top: 150px;
+}
+
+.add_btm_margin {
+    margin-bottom: 48px;
+}
+
+
+/*FIRST SECTION: Collections Carousel*/
+
+#collections,
+#collections .carousel-inner {
+    width: 100vw;
+    height: 100vh;
+}
+
+#collections .carousel-control-prev,
+#collections .carousel-control-next {
+    top: 50vh;
+    height: 40px;
+}
+
+#collections .carousel-control-prev:hover,
+#collections .carousel-control-prev:focus {
+    padding-right: 10px;
+}
+
+#collections .carousel-control-next:hover,
+#collections .carousel-control-next:focus {
+    padding-left: 10px;
+}
+
+#collections .slide_img1,
+#collections .slide_img2 {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#collections .slide_img1 {
+    background-image: url("https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFkaWRhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+}
+
+#collections .slide_img2 {
+    background-image: url("https://images.unsplash.com/photo-1588110679566-158c6dea107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGFkaWRhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+}
+
+#collections .sm_caption {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+#collections .collection_name {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-size: 48px;
+    font-style: italic;
+    margin-top: -16px;
+}
+
+#collections .carousel-caption {
+    margin-bottom: 40vh;
+}
+
+.btn_down {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 3;
+    margin-top: -100px;
+    margin-left: 48%;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn_down i {
+    font-size: 30px;
+    color: white;
+}
+
+.btn_down :hover {
+    padding-top: 5px;
+    transition: padding 0.5s;
+}
+
+
+/*SECOND SECTION: Welcome*/
+
+.welcome_ctn {
+    width: 100vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #5D5B58;
+    /*background-color: #E9E7E1;*/
+}
+
+.welcome_ctn .ctn_wrapper {
+    margin: 100px 0;
+}
+
+.welcome_ctn .emphasis_txt {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 30px;
+    color: #5D5B58;
+}
+
+.welcome_ctn .normal_txt {
+    font-size: 21px;
+    font-weight: 400;
+    color: #5D5B58;
+}
+
+.btn_down_altered {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 3;
+    margin-top: calc((100vh - 604px)/5);
+    margin-left: 48vw;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn_down_altered i {
+    font-size: 30px;
+    color: #5D5B58;
+}
+
+.btn_down_altered :hover {
+    padding-top: 5px;
+    transition: padding 0.5s;
+}
+
+
+/*LOGO ANIMATION */
+
+#sign_wrapper {
+    display: inline-block;
+    width: 156px;
+    height: 84px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 35%;
+}
+
+#signature path {
+    fill: none;
+    stroke: #849792;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#signature .line {
+    stroke-dasharray: 323;
+    -webkit-animation: write 5s linear infinite;
+    animation: write 5s linear infinite;
+}
+
+@keyframes write {
+    0% {
+        stroke-dashoffset: 323;
+    }
+    40% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*THIRD SECTION: Commitments*/
+
+.commitment_ctn {
+    /*background-image: url(../pic/com_bg2.jpg);
+	background-size: cover;
+	background-position: center center;
+	z-index: -3;*/
+    /*margin-bottom: 140px;*/
+    padding: 0 72px;
+}
+
+.commitment_ctn .commitment_wrapper {
+    width: 100%;
+    margin-bottom: 140px;
+}
+
+.commitment_ctn .grass-left {
+    /*display: none;*/
+    width: 100%;
+    height: 445px;
+    background-image: url("../pic/grass-left.png");
+    background-size: cover;
+    background-position: left top;
+    position: relative;
+    z-index: -1;
+}
+
+.commitment_ctn .grass-right {
+    /*display: none;*/
+    width: 100%;
+    height: 445px;
+    background-image: url("../pic/grass-right.png");
+    background-size: cover;
+    background-position: right top;
+    position: relative;
+    z-index: -1;
+}
+
+.commitment_ctn .stone {
+    width: 100%;
+    height: 445px;
+    background-color: #E9E7E1;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 72px 0;
+}
+
+.commitment_ctn .stm_wrapper {
+    padding-left: 60px;
+}
+
+.commitment_ctn .stm {
+    width: 130px;
+    height: 200px;
+    color: #849792;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.commitment_ctn .stm i {
+    font-size: 72px;
+}
+
+
+/*FOURTH SECTION: Latest Products*/
+
+.prod_slide {
+    padding: 0 72px;
+    margin-top: 24px;
+}
+
+.prod_slide .prod_card {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.prod_slide .prod_card:hover {
+    filter: brightness(1.05);
+}
+
+.prod_slide .blank_ctn {
+    width: 100%;
+    height: 315px;
+}
+
+.prod1 {
+    background-image: url("../pic/prod1.jpg");
+}
+
+.prod2 {
+    background-image: url("../pic/prod2.jpg");
+}
+
+.prod3 {
+    background-image: url("../pic/prod3.jpg");
+}
+
+.prod4 {
+    background-image: url("../pic/prod4.jpg");
+}
+
+.prod5 {
+    background-image: url("../pic/prod5.jpg");
+}
+
+.prod6 {
+    background-image: url("../pic/prod6.jpg");
+}
+
+.prod_slide .prod_name {
+    width: 100%;
+    height: 85px;
+    background-color: #E9E7E1;
+    opacity: 0.9;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    text-align: center;
+    padding: 12px;
+    color: #5D5B58;
+}
+
+.prod_slide .slick-dots li button {
+    padding: 10px;
+}
+
+.prod_slide .slick-slider {
+    margin: 0;
+    margin-bottom: 48px;
+    margin-top: 48px;
+}
