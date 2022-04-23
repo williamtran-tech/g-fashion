@@ -17,7 +17,7 @@ use App\Http\Controllers\ProductController;
 
 Route::get('products', [ProductController::class, 'allProducts']);
 
-Route::get('products/{product:slug}', [ProductController::class, 'productDetails']);
+Route::get('products/{product:slug}', [ProductController::class, 'productDetails']); //Product::where ('slug', $product)->first() | firstOrFail()
 
 Route::get('/', function () {
     return view('landing_page');
