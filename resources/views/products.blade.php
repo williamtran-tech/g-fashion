@@ -5,7 +5,7 @@
     @foreach ($products as $product)
         <article>
             <h1>
-                <a href="/products/{{$product->id}}">
+                <a href="/products/{{$product->slug}}">
                     {!! $product->name !!}
                 </a>
             </h1>
