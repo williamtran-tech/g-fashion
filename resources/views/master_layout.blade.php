@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_style_W.css">
+	<link rel="stylesheet" type="text/css" href="css/all_products.css">
 </head>
 <body>
     <div class="injoy_megamenu">
@@ -43,65 +45,26 @@
 						<!-- DROPDOWN: Shop Products-->
 						<li class="dropdown menu-large nav-item">
 							
-							<a href="#" class="menu_text" data-toggle="dropdown" id="dropdownShop">PRODUCT</a>
+							<a href="#" class="menu_text" data-toggle="dropdown" id="dropdownShop" data-bs-toggle="dropdown">PRODUCT</a>
 							
 							<div class="dropdown-menu megamenu p-0 m-0" aria-labelledby="dropdownShop">
 						
-									<div class="row mx-auto menu_wrapper">
-										<div class="col-xl-1"></div>
-										<div class="col-xl-10 pl-5 ml-4">
-											<div class="float-left shop_menu_col">
-											<ul class="list-unstyled text-center">
-												<li class="menucat_text mb-3">Living</li>
-												<li class="menu_link"><a href="Products_Sofa.html">Sofas</li>
-												<li class="menu_link">Rugs</li>
-												<li class="menu_link">Lamps</li>
-											</ul>
-											</div>
-									
-									
-											<div class="float-left shop_menu_col">
-											<ul class="list-unstyled text-center">
-												<li class="menucat_text mb-3">Dining</li>
-												<li class="menu_link"><a href="product_tables.html">Tables</a></li>
-												<li class="menu_link">Lights</li>
-												<li class="menu_link">Wares</li>
-											</ul>
-											</div>
-									
-										<div class="float-left shop_menu_col">
-											<ul class="list-unstyled text-center">
-												<li class="menucat_text mb-3">Bedding</li>
-												<li class="menu_link"><a href="product_beds.html">Beds</a></li>
-												<li class="menu_link">Storage</li>
-												<li class="menu_link">Textiles</li>
-											</ul>
-										</div>
-										<div class="float-left shop_menu_col">
-											<ul class="list-unstyled text-center">
-												<li class="menucat_text mb-3">Bathing</li>
-												<li class="menu_link">Mirrors</li>
-												<li class="menu_link">Baskets</li>
-												<li class="menu_link">Accessories</li>
-											</ul>
-										</div>
-										<div class="float-left shop_menu_col">
-											<ul class="list-unstyled text-center">
-												<li class="menucat_text mb-3">Working</li>
-												<li class="menu_link">Desks</li>
-												<li class="menu_link">Chairs</li>
-												<li class="menu_link"><a href="product_shelves.html">Shelves</a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-										<div class="col-xl-1"></div>
+									<div class="row mx-auto menu_wrapper justify-content-center">
+                                            <div class="col-2 text-center">
+                                                <a href="/product"> <h4>Adidas</h4></a>
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <a href=""> <h4>Nike</h4></a>
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                <a href=""> <h4>Others</h4></a>
+                                            </div>
 									</div>
 							
-								</div>
+							</div>
 
-							</li>
-						</ul>
+						</li>
+					</ul>
 					<!-- END: Menu Text Links -->
 
 
@@ -129,13 +92,14 @@
 				</div>
 
 				</div>
-
-
 		</div>
 	</div>
-@yield('register') 
-{{-- @yield('login')  --}}
-{{-- @yield('products') --}}
+    @yield('register') 
+    @yield('login') 
+
+    @yield('landing_page')
+  
+    @yield('all_product')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
