@@ -1,0 +1,326 @@
+/*====================================*/
+
+
+/*TRANSPARENT MEGAMENU FULL NAVIGATION 1440*/
+
+
+/*====================================*/
+
+
+/*Special menu button*/
+
+.menu_btn_outline {
+    background-color: transparent;
+    border-radius: 1px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.menu_btn_outline:hover {
+    background-color: rgba(132, 151, 146, 0.3);
+    border-color: #849792;
+    transition: 0.5s ease-out;
+}
+
+
+/*Megamenu container*/
+
+.injoy_megamenu {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.injoy_header {
+    padding: 21px 72px;
+}
+
+.side_pane {
+    width: 35vw;
+}
+
+
+/*Menu Item Text Links*/
+
+.menu_text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.add_margin {
+    margin-right: 40px;
+}
+
+
+/*Dropdown Menu Pane*/
+
+.menu-large {
+    color: #B0AA9C;
+    position: static !important;
+}
+
+.menucat_text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    color: #B0AA9C;
+    font-size: 18px;
+}
+
+
+/*Submenu wrappers for Collections, Search and Account*/
+
+.menu_wrapper {
+    padding: 60px 72px;
+    border-top: 0.5px solid #849792;
+}
+
+
+/*Submenu for Shop*/
+
+.megamenu {
+    width: 100vw;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 4px -4px rgba(132, 151, 146, 0.3);
+}
+
+.menu_link,
+.menu_link a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 0;
+    color: #849792;
+    cursor: pointer;
+}
+
+.megamenu .menu_link:hover,
+.menu_link a:hover {
+    filter: brightness(1.2);
+}
+
+.shop_menu_col {
+    padding: 0 4.2vw;
+}
+
+
+/*Menu Icon Links*/
+
+.menu_icon {
+    font-size: 21px;
+    color: white;
+}
+
+.menu_icon:hover,
+.menu_text:hover {
+    filter: brightness(0.8);
+}
+
+.add_icon_margin {
+    margin-right: 16px;
+}
+
+
+/*SEARCH*/
+
+.search_text {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    color: #849792;
+    padding-bottom: 10px;
+}
+
+
+/*search input textfield*/
+
+.m_input {
+    width: 380px;
+    height: 45px;
+    color: #374c59;
+    outline: none;
+    padding: 10px;
+    border-bottom: 0.5px solid #849792;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5D5B58;
+    background-color: transparent;
+}
+
+.m_input::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #849792;
+}
+
+.m_input:focus {
+    background-color: #E6EAE8;
+}
+
+.divider {
+    color: #849792
+}
+
+
+/*Slide down transition for dropdown menu*/
+
+.dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.5s; */
+}
+
+.navbar-nav .dropdown-menu.show {
+    max-height: 400px;
+}
+
+
+/*Hide 320px Mini Version*/
+
+.injoy_minimenu,
+.submenu {
+    display: none;
+}
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+
+/* Small devices (landscape phones, 320px and up) */
+
+@media (min-width: 320px) and (max-width: 1200px) {
+    /*====================================*/
+    /*. TRANSPARENT MINI MENU 320px.    */
+    /*====================================*/
+    /*Hide 1440px Mini Version*/
+    .injoy_megamenu {
+        display: none;
+    }
+    /*Menu wrapper shown on page load*/
+    .injoy_miniheader {
+        background-color: white;
+        padding: 10px 24px;
+    }
+    /*Menu wrapper when toggled*/
+    .injoy_minimenu,
+    .submenu {
+        width: 100vw;
+        display: block;
+        z-index: 12;
+    }
+    .injoy_minimenu .nav-link {
+        color: #849792;
+    }
+    .mini_toggler i {
+        font-size: 18px;
+        color: #849792;
+        cursor: pointer;
+        margin-right: 18vw;
+    }
+    .mini_cart i {
+        font-size: 21px;
+        margin-left: 12vw;
+        color: #849792;
+    }
+    .logo_holder_mini {
+        width: 27vw;
+    }
+    .m_input {
+        width: 70vw;
+        height: 32px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .m_input::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+    /*FLYOUT SUBMENU*/
+    .submenu {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        min-height: 100%;
+        max-height: none;
+        background-color: white;
+        z-index: 14;
+    }
+    .submenu,
+    .submenu li {
+        color: #849792;
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+    }
+    .submenu a:hover {
+        color: #B0BAB7;
+    }
+    .sub_row {
+        width: 270px;
+        border-bottom: 0.5px solid #849792;
+        padding-left: 5px;
+    }
+    .sub_row_header {
+        width: 270px;
+        border-bottom: 0.5px solid #849792;
+        padding: 21px 0;
+    }
+    .pane_1,
+    .pane_2,
+    .pane_3,
+    .pane_4,
+    .pane_5,
+    .pane_6,
+    .pane_7,
+    .pane_8 {
+        left: -100%;
+        padding: 14px 24px 11px 24px;
+        transition: 0.5s ease;
+    }
+    .sub_foot {
+        margin-top: 36px;
+    }
+    .logo_holder_mini_b {
+        width: 25vw;
+        margin-right: 51.5vw;
+        margin-bottom: 8px;
+    }
+    .close_btn {
+        font-size: 16px;
+    }
+    .back_btn {
+        margin-right: 230px;
+    }
+    .left_text {
+        width: 60vw;
+        padding: 21px 0;
+    }
+    .right_text {
+        padding: 21px 0 21px 48px;
+    }
+}

@@ -1,0 +1,248 @@
+body {
+	background-color: white;
+	overflow-x: hidden;
+	text-decoration: none;
+	font-family: "Raleway",sans-serif; /*This is a base font. Merriweather is for decoration or headers*/
+}
+
+a {
+	text-decoration: none!important;
+		color: #849792;
+}
+
+.row {
+	margin: 0;
+}
+
+#preloader {
+  align-items: center;
+  background: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+#preload img {
+	animation: pageload 1s;
+}
+
+@keyframes pageload {
+
+	from {
+		opacity: 0.3;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/*BUTTONS*/
+
+.btn_outline_w,.mini_btn_outline_w {
+	display: inline-block;
+	border-radius: 1px;
+	border: 1px solid white;
+	padding: 10px 36px;
+	color: white;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	background: linear-gradient(90deg, white 50%, transparent 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all 0.8s ease-out;
+	cursor: pointer;
+}
+
+	.btn_outline_w:hover {
+		background-position: left bottom;
+		color: #849792;
+	}
+
+
+
+
+/*Button with outline color*/
+
+.btn_outline {
+	display: inline-block;
+	border-radius: 1px;
+	border: 1px solid #849792;
+	padding: 10px 36px;
+	color: #849792;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	background: linear-gradient(90deg, #849792 50%, transparent 50%);
+	background-size: 210% 100%;
+	background-position: right bottom;
+	transition: all 0.8s ease-out;
+}
+
+	.btn_outline:hover {
+		background-position: left bottom;
+		color: white;
+	}
+
+
+/*Ripple button*/
+
+.btn_ripple {
+	font-family: "Raleway", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background-position: center;
+	letter-spacing: 1px;
+	transition: background 0.8s;
+	border-radius: 1px;
+	padding: 14px 36px;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: white;
+	background-color: #859893;
+	outline: none;
+	border: none;
+}
+
+.btn_ripple:hover {
+  	background: #B0BAB7 radial-gradient(circle, transparent 1%, #B0BAB7 1%) center/15000%;
+}
+.btn_ripple:active {
+	color: #859893;
+  	background-color: #EAE7E2;
+ 	background-size: 100%;
+ 	transition: background 0s;
+}
+
+
+/*menu  links only*/
+
+.links a, .links {
+	color: #849792;
+}
+
+.links a, .links {
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #849792;
+	padding-bottom: 5px;
+}
+	
+	.links:hover {
+		border-bottom: 0.5px solid #849792;
+	}
+
+/*Content links - main color*/
+.links_adjusted a {
+	color: #5D5B58;
+}
+
+.links_adjusted {
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	padding-bottom: 5px;
+	border-bottom: 0.5px solid #5D5B58;
+	color: #5D5B58;
+	transition: 0.5s;
+}
+	
+	.links_adjusted:hover {
+		color: #849792;
+		border-bottom: 0.5px solid #849792;
+		padding-bottom: 8px;
+	}
+
+
+
+/*INPUT TEXT*/
+
+.f_input {
+    outline: none;
+    border-radius: 1px;
+    padding: 10px 16px;
+    border: 0.5px solid #849792;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight:  400;
+    color: #5D5B58;
+}
+
+.f_input::-webkit-input-placeholder{
+  font-size: 16px; 
+  color: #849792;
+}
+
+
+.f_input:focus {
+  background-color: #E6EAE8;
+}
+
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* Small devices (landscape phones, 320px and up) */
+@media (min-width: 320px) and (max-width: 992px) {  
+
+
+.btn_outline {
+	border-radius: 1px;
+	border: 0.5px solid #849792;
+	padding: 8px 30px;
+	font-family: "Raleway", sans-serif;
+	font-size: 14px;
+}
+
+.btn_outline_w {
+		font-size: 14px;
+		border-radius: 1px;
+		border: 1px solid white;
+		padding: 8px 30px;
+}
+
+	.btn_outline_w:hover {
+		background-position: left bottom;
+		color: #849792;
+	}
+
+.links, .links a {
+	font-family: "Raleway", sans-serif !important;
+	font-size: 14px;
+	border-bottom: 0.5px solid #849792;
+}
+
+
+.links_adjusted {
+	font-size: 14px;
+	padding-bottom: 3px;
+	transition: 0.5s;
+}
+	
+	.links_adjusted:hover {
+		padding: 0;
+	}
+
+.btn_ripple {padding: 8px 30px;}
+
+}

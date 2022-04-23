@@ -15,7 +15,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('products', [ProductController::class, 'allProducts']);
+// Route::get('products', [ProductController::class, 'allProducts']);
 
 Route::get('products/{product}', [ProductController::class, 'productDetails']);
 
@@ -23,10 +23,13 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::get('login', function () {
+Route::get('/login', function () {
     return view('login');
 });
 
 Route::get('register', function () {
-    return view('register');
+    return view('/register');
+});
+Route::get('product', function () {
+    return view('product');
 });
