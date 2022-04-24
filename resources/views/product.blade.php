@@ -40,7 +40,7 @@
             <div class='cvp'>
                 <h5 class="card-title font-weight-bold" id="name">Nike</h5>
                 <p class="card-text" id="price">$299</p> 
-                <a href="#" class="btn details px-auto" >view details</a><br />
+                <a href="/product01" class="btn details px-auto" >view details</a><br />
                 <a href="#" class="btn cart px-auto">ADD TO CART</a>
             </div>
         </div>

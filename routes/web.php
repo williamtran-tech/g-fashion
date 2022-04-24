@@ -40,3 +40,6 @@ Route::get('register', function () {
 Route::get('product', function () {
     return view('product');
 });
+Route::get('product01', function () {
+    return view('product_detail');
+});
