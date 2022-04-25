@@ -2,6 +2,7 @@
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\ImagePath;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
@@ -22,7 +23,8 @@ Route::get('products/{product:slug}', [ProductController::class, 'productDetails
 
 Route::get('categories/{category:slug}', function (Category $category){
     return view('products', [
-        'products' =>$category->products
+        'products' => $category->products
+        
     ]);
 });
 
