@@ -36,7 +36,7 @@
 					<ul class="nav navbar-nav side_pane col">
 
 						<li class="nav-item">
-							<a href="about01.html" class="menu_text add_margin">HOME</a>
+							<a href="/" class="menu_text add_margin">HOME</a>
 						</li>
 
 						<li class="nav-item">
@@ -71,7 +71,7 @@
 
 					<!-- Navbar brand -->
 					<div class="nav navbar-nav col justify-content-center">
-							<a class="navbar-brand" href="home.html"><h1>G_Fashion</h1></a>
+							<a class="navbar-brand" href="/"><h1>G Fashion</h1></a>
 					</div>
 
 					<!-- START: Menu Icons Links -->

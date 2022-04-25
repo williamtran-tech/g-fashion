@@ -17,7 +17,7 @@
             <div class="carousel-caption">
                 <p class="sm_caption">Welcome to G Fashion</p>
                 
-                <p class="text-center"><a href="carpediem01.html" class="btn_outline_w btn_xl">Explore more product here</a></p>
+                <p class="text-center"><a href="/products" class="btn_outline_w btn_xl">Explore more product here</a></p>
 
                 <!-- for 320px -->
                 <p class="text-center"><button class="btn_outline_w btn_sm"><a href="wfh_collection.html">Contact us</a></button></p>
