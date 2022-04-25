@@ -45,3 +45,6 @@ Route::get('product', function () {
 Route::get('product01', function () {
     return view('product_detail');
 });
+Route::get('cart', function () {
+    return view('cart');
+});

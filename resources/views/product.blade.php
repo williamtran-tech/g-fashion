@@ -41,7 +41,7 @@
                 <h5 class="card-title font-weight-bold" id="name">Nike</h5>
                 <p class="card-text" id="price">$299</p> 
                 <a href="/product01" class="btn details px-auto" >view details</a><br />
-                <a href="#" class="btn cart px-auto">ADD TO CART</a>
+                <a href="#" class="btn cart px-auto" onclick="add_to_cart(this.id)" id="1">ADD TO CART</a>
             </div>
         </div>
     </div>
