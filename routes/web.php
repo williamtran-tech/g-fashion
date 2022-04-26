@@ -49,8 +49,13 @@ Route::get('cart', function () {
     return view('cart');
 });
 
-Route::get('create_product', function () {
-    return view('create_product');
+Route::get('create-product', function (Category $category) {
+    return view('admin.create_product', [
+        'categories' => $category->all()
+    ]);
 });
 
-Route::post('submit', [ProductController::class, 'createProduct']);
+Route::post('create_product', [ProductController::class, 'createProduct']);
+
+Route::get('admin-products', [ProductController::class, 'viewProduct']);
+Route::post('filter-by-category', [ProductController::class, 'filterByCategory']);
