@@ -48,3 +48,9 @@ Route::get('product01', function () {
 Route::get('cart', function () {
     return view('cart');
 });
+
+Route::get('create_product', function () {
+    return view('create_product');
+});
+
+Route::post('submit', [ProductController::class, 'createProduct']);
