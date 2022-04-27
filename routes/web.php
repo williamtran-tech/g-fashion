@@ -37,7 +37,7 @@ Route::get('/login', function () {
 });
 
 Route::get('register', function () {
-    return view('/register');
+    return view('register');
 });
 Route::get('product', function () {
     return view('product');
@@ -48,3 +48,5 @@ Route::get('product01', function () {
 Route::get('cart', function () {
     return view('cart');
 });
+
+

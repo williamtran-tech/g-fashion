@@ -1,13 +1,3 @@
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos < currentScrollPos) {
-//         document.getElementById("fullmenu").style.top = "-60px";
-//     } else {
-//         document.getElementById("fullmenu").style.top = "0px";
-//     }
-//     prevScrollpos = currentScrollPos;
-// }
 $(document).ready(function() {
     var scroll_pos = 0;
     $(document).scroll(function() {
@@ -24,7 +14,7 @@ $(document).ready(function() {
             $(".injoy_megamenu").css("background-color", "transparent");
             $(".menu_text").css("color", "#fff");
             $(".menu_icon").css("color", "#fff");
-            $(".logo").attr("src", "pic/logo_white.png");
+            // $(".logo").attr("src", "pic/logo_white.png");
             $(".menu_btn_outline").css("color", "#fff");
             $(".menu_btn_outline").css("border-color", "#fff");
         }

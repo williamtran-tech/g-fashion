@@ -35,3 +35,6 @@
       </form>
 </div>
 @endsection
+@section('menu_js_2')
+<script src="js/navbar2.js"></script>
+@endsection

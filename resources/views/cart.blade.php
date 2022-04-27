@@ -1,10 +1,11 @@
 @extends('master_layout')
+@extends('cart.cart_layout')
 @section('cart')
-<div class="carousel slide">
+{{-- <div class="carousel slide">
     <!-- The Slideshow -->
         <div class="img">
         </div>
-</div>
+</div> --}}
 <div class="shopping-cart">
 
     <div class="column-labels">
@@ -79,4 +80,10 @@
   
   </div>
   
+@endsection
+@section('menu_js_2')
+<script src="js/navbar2.js"></script>
+@endsection
+@section('menu_js_2')
+<script src="js/navbar2.js"></script>
 @endsection

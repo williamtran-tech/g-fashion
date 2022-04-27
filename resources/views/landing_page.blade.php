@@ -37,5 +37,7 @@
         <span class="carousel-control-next-icon"></span>
     </a>
 </div>
-
+@endsection
+@section('menu_js')
+<script src="js/navbar.js"></script>
 @endsection

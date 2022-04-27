@@ -37,6 +37,7 @@
     position: fixed;
     top: 0;
     z-index: 99;
+    transition: top 0.5s;
 }
 
 .injoy_header {
@@ -101,7 +102,7 @@
     font-size: 18px;
     font-weight: 400;
     padding: 8px 0;
-    color: #849792;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -251,6 +252,9 @@ Bootstrap 4 breakpoints
     }
     .logo_holder_mini {
         width: 27vw;
+    }
+    .brand_logo {
+        color: #fff !important;
     }
     .m_input {
         width: 70vw;
