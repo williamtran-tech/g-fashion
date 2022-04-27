@@ -1,4 +1,5 @@
-@extends('master_layout')
+@extends('layouts.master_layout')
+@extends('layouts.sign_up_layout')
 @section('register')
 
 <section class="vh-100" style="background-color: #eee;">

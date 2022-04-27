@@ -28,26 +28,26 @@ Route::get('categories/{category:slug}', function (Category $category){
     ]);
 });
 
-Route::get('/', function () {
-    return view('landing_page');
-});
+// Route::get('/', function () {
+//     return view('users.landing_page');
+// });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('users.login');
+// });
 
-Route::get('register', function () {
-    return view('register');
-});
-Route::get('product', function () {
-    return view('product');
-});
-Route::get('product01', function () {
-    return view('product_detail');
-});
-Route::get('cart', function () {
-    return view('cart');
-});
+// Route::get('register', function () {
+//     return view('register');
+// });
+// Route::get('product', function () {
+//     return view('product');
+// });
+// Route::get('product01', function () {
+//     return view('users.product_detail');
+// });
+// Route::get('cart', function () {
+//     return view('cart');
+// });
 
 Route::get('create-product', function (Category $category) {
     return view('admin.create_product', [
@@ -57,30 +57,30 @@ Route::get('create-product', function (Category $category) {
 
 //Landing page
 Route::get('/', function () {
-    return view('landing_page');
+    return view('users.landing_page');
 });
 
 //Login page
 Route::get('/login', function () {
-    return view('login');
+    return view('users.login');
 });
 
 //Register page
 Route::get('register', function () {
-    return view('/register');
+    return view('users.register');
 });
 Route::get('product', function () {
-    return view('product');
+    return view('users.product');
 });
 
 //Product detail
 Route::get('product01', function () {
-    return view('product_detail');
+    return view('users.product_detail');
 });
 
 //Cart
 Route::get('/cart', function () {
-    return view('cart');
+    return view('users.cart');
 });
 
 //Home page

@@ -1,4 +1,5 @@
-@extends('master_layout')
+@extends('layouts.master_layout')
+@extends('layouts.product_layout')
 @section('filter')
 <div class="carousel slide">
     <!-- The Slideshow -->
@@ -21,9 +22,28 @@
                     </button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog ">
                         <div class="modal-content">
-                            <h1>hello</h1>
+                            <div class="select m-5">
+                                <form action="">
+                                    <select class="form-select form-select-lg mb-3 " aria-label=".form-select-lg example">
+                                        <option selected>Category</option>
+                                        <option value="1">Adidas</option>
+                                        <option value="2">Nike</option>
+                                        <option value="3">Order</option>
+                                    </select>
+                                    <select class="form-select form-select-lg  mb-3 " aria-label=".form-select-lg example">
+                                        <option selected>Sort by</option>
+                                        <option value="1">Price increase</option>
+                                        <option value="2">Price decrease</option>
+                                    </select>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-dark">Ok</button>
+                                </div>
+                                </form>   
+                                
+                            </div>
+                            
                         </div>
                         </div>
                     </div>

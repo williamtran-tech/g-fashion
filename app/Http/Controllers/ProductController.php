@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     //
     public function allProducts(){
-        return view('products', [
+        return view('users.products', [
             'products' => Product::all()]);
     }
 

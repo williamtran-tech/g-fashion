@@ -22,6 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="css/all_products.css">
     <link rel="stylesheet" type="text/css" href="css/product_detail.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 </head>
 <body>
@@ -97,14 +98,8 @@
 				</div>
 		</div>
 	</div>
-    @yield('register') 
-    @yield('login') 
 
     @yield('landing_page')
-  
-    @yield('all_product')
-    @yield('product_detail')
-    @yield('cart')
 
 	{{-- Admin section --}}
 	@yield('create_product')

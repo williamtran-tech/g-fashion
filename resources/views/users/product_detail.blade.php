@@ -1,4 +1,5 @@
-@extends('master_layout')
+@extends('layouts.master_layout')
+@extends('layouts.product_detail_layout')
 @section('product_detail')
 <div class="container ">
     <div class="card_detail ">

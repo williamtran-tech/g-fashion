@@ -1,4 +1,5 @@
-@extends('master_layout')
+@extends('layouts.master_layout')
+@extends('layouts.sign_in_layout')
 @section('login')
 <div class="login_form d-flex justify-content-center">
     <form class="mx-1 mx-md-4 col-4">

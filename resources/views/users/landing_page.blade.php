@@ -1,4 +1,5 @@
-@extends('master_layout')
+@extends('layouts.master_layout')
+
 @section('top_banner')
 <div class="row top_banner">
     <img src="https://images.unsplash.com/photo-1515555230216-82228b88ea98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxuaWtlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
