@@ -49,9 +49,6 @@ Route::get('cart', function () {
     return view('cart');
 });
 
-<<<<<<< HEAD
-
-=======
 Route::get('create-product', function (Category $category) {
     return view('admin.create_product', [
         'categories' => $category->all()
@@ -144,4 +141,3 @@ Route::post('create_product', [ProductController::class, 'createProduct']);
 
 Route::get('admin-products', [ProductController::class, 'viewProduct']);
 Route::post('filter-by-category', [ProductController::class, 'filterByCategory']);
->>>>>>> 05bfad58f33d3cfe5e53d36a65681eb932caa746
