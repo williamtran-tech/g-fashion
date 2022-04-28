@@ -25,6 +25,8 @@
       <td style="text-align:center;">0896494632</td>
       <td style="text-align:center;">Admin</td>
       <td style="text-align:center;">
+        <a type="button" class="btn btn-warning" href="{{ url('/updateAdmin')}}">Update</a>
+        <a type="button" class="btn btn-danger">Delete</a>
       </td>
     </tr>
     <tr>

@@ -20,44 +20,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>  
-      <td style="text-align:center;">Áo Chery</td>
-      <td style="text-align:center;">200,000₫</td>
-      <td>- Áo Chery thời trang thiết kế trẻ trung, hiện đại mang đến cho bạn gái phong cách năng động nhưng không kém phần nữ tính.</td>
-      <td style="text-align:center;">Chery</td>
-      <td style="text-align:center;">
-        <a type="button" class="btn btn-warning" href="{{ url('/updateProduct')}}">Update</a>
-        <br><br>
-        <a type="button" class="btn btn-danger" href="#">Delete</a>
-      </td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td style="text-align:center;">Áo khoác kaki hai lớp mangto</td>
-      <td style="text-align:center;">425,000₫</td>  
-      <td>Chất liệu thun cotton mềm mại, co giãn, thấm hút tốt.
-       Cho phái mạnh thêm thời trang phong cách cá tính và sành điệu.</td>
-      <td style="text-align:center;">Mangto</td>
-      <td style="text-align:center;">
-        <a type="button" class="btn btn-warning" href="{{ url('/updateProduct')}}">Update</a>
-        <br><br>
-        <a type="button" class="btn btn-danger" href="#">Delete</a>
-    </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td style="text-align:center;">Áo thun dài tay Vendo</td>
-      <td style="text-align:center;">225,000₫</td>
-      <td>Galaxy A12 (6GB/128GB) 2021, một phiên bản smartphone giá rẻ với thiết kế đẹp, cấu hình tốt.</td>
-      <td style="text-align:center;">Vendo</td>
-      <td style="text-align:center;">
-        <a type="button" class="btn btn-warning" href="{{ url('/updateProduct ')}}">Update</a>
-        <br><br>
-        <a type="button" class="btn btn-danger" href="#">Delete</a>
-    </td>
-    </tr>
+      @foreach ($products as $product)
+        <tr>
+          <th scope="row">{{$product->id}}</th>  
+          <td style="text-align:center;">{{$product->name}}</td>
+          <td style="text-align:center;">{{$product->price}}</td>
+          <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat natus omnis ea incidunt voluptas, quae suuga voluptates sapiente non dolore quam.</td>
+          <td style="text-align:center;">{{$product->category->name}}</td>
+          <td style="text-align:center;">
+          <a type="button" class="btn btn-warning" href="">Update</a>
+          <br><br>
+          <a type="button" class="btn btn-danger" href="">Delete</a>
+          </td>
+      </tr>
+      @endforeach
   </tbody>
 </table>
 @stop

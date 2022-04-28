@@ -40,16 +40,24 @@ class ProductController extends Controller
     }
     
     //View product and update
-    function viewProduct(){
-        return view('admin.products', [
-            'products' => Product::all(),
-            'categories' => Category::all()
-        ]);
-    }
+    // function viewProduct(){
+    //     return view('admin.products', [
+    //         'products' => Product::all(),
+    //         'categories' => Category::all()
+    //     ]);
+    // }
 
     function filterByCategory(Request $request){
         return view('admin.products', [
             'products' => Product::where('category_id', $request->category)->get(),
+            'categories' => Category::all()
+        ]);
+    }
+
+    //Admin page
+    function viewProducts(){
+        return view('admins.Fashion.showProduct', [
+            'products' => Product::all(),
             'categories' => Category::all()
         ]);
     }

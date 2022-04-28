@@ -90,51 +90,49 @@ Route::get('/home', function () {
 
 //Cart
 Route::get('/cartAdmin  ', function () {
-    return view('Admin.cart');
+    return view('admins.admin.cart');
 });
    
 //View static
 Route::get('/statistic', function () {
-    return view('statistic');
+    return view('admins.statistic');
  });
     
  //Admin
 Route::get('/showAdmin', function () {
-    return view('admin.showAdmin');
+    return view('admins.admin.showAdmin');
 });
 
 //Update of Admin
 Route::get('/updateAdmin', function () {
-    return view('admin.updateAdmin');
+    return view('admins.admin.updateAdmin');
 });
 
 Route::get('/createAdmin', function () {
-    return view('admin.createNewAdmin');
+    return view('admins.admin.createNewAdmin');
 });
 
 //Phone
-Route::get('/showProduct', function () {
-    return view('Fashion.showProduct');
-});
+Route::get('/showProduct', [ProductController::class, 'viewProducts']);
 
 //Create product
 Route::get('/createNewProduct', function () {
-    return view('Fashion.createNewProduct');
+    return view('admins.Fashion.createNewProduct');
 });
 
 //Update product
 Route::get('/updateProduct', function () {
-    return view('Fashion.updateProduct');
+    return view('admins.Fashion.updateProduct');
 });
 
 //Accessory
 Route::get('/showCustomer', function () {
-    return view('Customer.showCustomer');
+    return view('admins.Customer.showCustomer');
 });
 
 //Create information of customer
 Route::get('/createCustomer', function () {
-    return view('Customer.createNewCustomer');
+    return view('admins.Customer.createNewCustomer');
 });
 
 Route::post('create_product', [ProductController::class, 'createProduct']);

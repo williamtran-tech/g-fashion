@@ -42,6 +42,7 @@
       <td style="text-align:center;">24/04</td>
       <td style="text-align:center; color: blue;"><p class="border border-primary">Paid</p></td>
       <td style="text-align:center;">
+        <button type="button" class="btn btn-danger">Delete</button>
       </td>
     </tr>
     <tr>
@@ -52,6 +53,7 @@
       <td style="text-align:center;">25/05</td>
       <td style="text-align:center; color: #FFC107;"><p class="border border-warning">Delivering</p></td>
       <td style="text-align:center;">
+        <button type="button" class="btn btn-danger">Delete</button>
       </td>
     </tr>
     <tr>
@@ -62,6 +64,7 @@
       <td style="text-align:center;">26/06</td>
       <td style="text-align:center; color: green;"><p class="border border-success">Done</p></td>
       <td style="text-align:center;">
+        <button type="button" class="btn btn-danger">Delete</button>
       </td>
     </tr>
   </tbody>
