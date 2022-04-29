@@ -23,7 +23,7 @@
 
 .menu_btn_outline:hover {
     background-color: rgba(132, 151, 146, 0.3);
-    border-color: #849792;
+    border-color: #ffffff;
     transition: 0.5s ease-out;
 }
 
@@ -83,7 +83,7 @@
 
 .menu_wrapper {
     padding: 60px 72px;
-    border-top: 0.5px solid #849792;
+    border-top: 0.5px solid #ffffff;
 }
 
 
@@ -237,7 +237,7 @@ Bootstrap 4 breakpoints
         z-index: 12;
     }
     .injoy_minimenu .nav-link {
-        color: #849792;
+        color: #ffffff;
     }
     .mini_toggler i {
         font-size: 18px;
@@ -253,8 +253,9 @@ Bootstrap 4 breakpoints
     .logo_holder_mini {
         width: 27vw;
     }
-    .brand_logo {
-        color: #fff !important;
+    .brand {
+        color: #fff;
+        font-weight: bolder;
     }
     .m_input {
         width: 70vw;
@@ -282,16 +283,16 @@ Bootstrap 4 breakpoints
         font-size: 18px;
     }
     .submenu a:hover {
-        color: #B0BAB7;
+        color: #ffffff;
     }
     .sub_row {
         width: 270px;
-        border-bottom: 0.5px solid #849792;
+        border-bottom: 0.5px solid #ffffff;
         padding-left: 5px;
     }
     .sub_row_header {
         width: 270px;
-        border-bottom: 0.5px solid #849792;
+        border-bottom: 0.5px solid #ffffff;
         padding: 21px 0;
     }
     .pane_1,

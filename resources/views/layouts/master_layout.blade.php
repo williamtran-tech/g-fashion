@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="css/product_detail.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-
 </head>
 <body>
     <div class="injoy_megamenu" id="fullmenu">
@@ -43,7 +42,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="Ideas.html" class="menu_text add_margin">CONTACT</a>
+							<a href="" class="menu_text add_margin">CONTACT</a>
 						</li>
 
 						<!-- DROPDOWN: Shop Products-->
@@ -73,10 +72,12 @@
 
 
 					<!-- Navbar brand -->
-					<div class="nav navbar-nav col justify-content-center">
-							<a class="navbar-brand" href="/"><h1 class="brand_logo">G Fashion</h1></a>
+					{{-- <div class="nav navbar-nav col justify-content-center">
+							<a class="" href="/"><h1 class="brand_logo font-weight-bolder" href="/">G Fashion</h1></a>
+					</div> --}}
+					<div class="col logo_brand d-flex justify-content-center" >
+						<a class="" href="/"><h1>G Fashion</h1></a>
 					</div>
-
 					<!-- START: Menu Icons Links -->
 					<ul class="nav navbar-nav ml-5  col justify-content-end">
 						<li class="ml-auto">

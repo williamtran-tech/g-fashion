@@ -36,22 +36,22 @@ img {
     margin-top: 15px;
 }
 
-.preview-thumbnail.nav-tabs li {
-    width: 18%;
+.nav-tab li {
     margin-right: 2.5%;
+    list-style-type: none;
 }
 
-.preview-thumbnail.nav-tabs li img {
+.nav-tabs li img {
     max-width: 100%;
     display: block;
 }
 
-.preview-thumbnail.nav-tabs li a {
+.nav-tabs li a {
     padding: 0;
     margin: 0;
 }
 
-.preview-thumbnail.nav-tabs li:last-of-type {
+.nav-tabs li:last-of-type {
     margin-right: 0;
 }
 
@@ -104,11 +104,14 @@ img {
     flex-grow: 1;
 }
 
-.product-title,
+.product-title {
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+
 .price,
 .sizes,
 .colors {
-    text-transform: UPPERCASE;
     font-weight: bold;
 }
 
