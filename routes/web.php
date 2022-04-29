@@ -24,7 +24,6 @@ Route::get('products/{product:slug}', [ProductController::class, 'productDetails
 Route::get('categories/{category:slug}', function (Category $category){
     return view('products', [
         'products' => $category->products
-        
     ]);
 });
 
