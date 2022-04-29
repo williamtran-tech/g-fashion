@@ -139,3 +139,11 @@ Route::post('create_product', [ProductController::class, 'createProduct']);
 
 Route::get('admin-products', [ProductController::class, 'viewProduct']);
 Route::post('filter-by-category', [ProductController::class, 'filterByCategory']);
+
+
+//Fetch data
+Route::get('fetch-products',[ProductController::class, 'fetchProduct']);
+
+//Update product route
+Route::get('update-product/{id}', [ProductController::class, 'editProduct']);
+Route::put('update-product/{id}', [ProductController::class, 'updateProduct']);

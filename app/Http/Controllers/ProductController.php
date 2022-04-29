@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+
 class ProductController extends Controller
 {
     //
@@ -57,8 +58,71 @@ class ProductController extends Controller
     //Admin page
     function viewProducts(){
         return view('admins.Fashion.showProduct', [
-            'products' => Product::all(),
+            // 'products' => Product::all(),
             'categories' => Category::all()
+        ]
+        );
+    }
+
+    public function fetchProduct(){
+        // Join two table by using Eloquent
+        $products = Product::join('categories', 'categories.id', '=' ,'products.category_id')->get(['products.*', 'categories.name AS category_name']);
+        return response()->json([
+            'products'=>$products,
         ]);
+    }
+
+    function editProduct($id){
+        $product = Product::find($id);
+        if ($product){
+            return response()->json([
+                'status'=>200,
+                'product'=>$product,
+            ]);
+        }
+        else {
+            return response()->json([
+                'status'=>404,
+                'message'=>'Product Not Found.'
+            ]);
+        }
+    }
+
+    function updateProduct(Request $request, $id){
+        // //Validate input
+        // $validator = $this->validate($request, [
+        //     'name' => 'required | max:2048'
+        // ]);
+
+        // if($validator->fails){
+        //     return response()->json([
+        //        'status' => 400,
+        //        'errors' => validate()->message() 
+        //     ]);
+        // }
+        // else {
+            $product = Product::find($id);
+
+            //Check product exist or not
+            if ($product){
+                //Update product
+                $product->name = $request->name;
+                $product->slug = $request->slug;
+                $product->price = $request->price;
+                $product->category_id = $request->category_id;
+                $product->update();
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Product updated successfully.' 
+                ]);
+            }
+            else {
+                return response()->json([
+                    'status'=>404,
+                    'message'=>'Product Not Found.'
+                ]);
+            }
+        // }
     }
 }
