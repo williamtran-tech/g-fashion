@@ -111,13 +111,7 @@ Route::get('/createAdmin', function () {
     return view('admins.admin.createNewAdmin');
 });
 
-//Phone
-Route::get('/showProduct', [ProductController::class, 'viewProducts']);
 
-//Create product
-Route::get('/createNewProduct', function () {
-    return view('admins.Fashion.createNewProduct');
-});
 
 //Update product
 Route::get('/updateProduct', function () {
@@ -142,6 +136,13 @@ Route::post('filter-by-category', [ProductController::class, 'filterByCategory']
 
 //Fetch data
 Route::get('fetch-products',[ProductController::class, 'fetchProduct']);
+
+//Show all products
+Route::get('/showProduct', [ProductController::class, 'viewProducts'])->name('admin_products');
+
+//Create product
+Route::get('/createNewProduct',[ProductController::class, 'creatingProduct']);
+Route::post('create-product', [ProductController::class, 'createProduct']);
 
 //Update product route
 Route::get('update-product/{id}', [ProductController::class, 'editProduct']);
