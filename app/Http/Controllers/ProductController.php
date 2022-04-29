@@ -16,7 +16,7 @@ class ProductController extends Controller
     }
 
     public function productDetails(Product $product){
-        return view('product', [
+        return view('product_detail', [
             'product' => $product
          ]);
     }
