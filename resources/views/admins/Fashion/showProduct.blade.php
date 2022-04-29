@@ -29,15 +29,15 @@
             <label for="name">Product Slug</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="edit_price" name="price" placeholder="Product Price" required>
+            <input type="number" min="1" class="form-control" id="edit_price" name="price" placeholder="Product Price" required>
             <label for="price">Product Price</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="edit_cost" name="cost" placeholder="Product Cost" required>
+            <input type="number" min="1" class="form-control" id="edit_cost" name="cost" placeholder="Product Cost" required>
             <label for="price">Product Cost</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="edit_quantity" name="quantity" placeholder="Product Quantity" required>
+            <input type="number" min="1" class="form-control" id="edit_quantity" name="quantity" placeholder="Product Quantity" required>
             <label for="price">Product Quantity</label>
           </div>
           <div class="form-floating mb-3">
@@ -109,7 +109,7 @@
           url: "fetch-products",
           dataType: "json",
           success: function (response) {
-            console.log(response.products);
+            // console.log(response.products);
             $('tbody').html("");
             $.each(response.products, function(key, product){
               $('tbody').append(

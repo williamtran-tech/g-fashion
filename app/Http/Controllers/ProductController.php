@@ -23,6 +23,12 @@ class ProductController extends Controller
 
     //Admin functions
     //Create new product
+    function creatingProduct(){
+        return view('admins.Fashion.createNewProduct', [
+            'categories' => Category::all()
+        ]);
+    }
+
     function createProduct(Request $request){
         $this->validate($request, [
             'name' => 'required | max:2048| regex:/^[a-zA-Z]+$/u'
@@ -34,10 +40,15 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->slug = $request->slug;
         $product->price = $request->price;
+        $product->cost = $request->cost;
+        $product->quantity = $request->quantity;
+        $product->description = $request->description;
         $product->category_id = $request->category;
         $product->save();
 
-        return redirect()->back()->with('success', 'Create product successfully.');   
+        // return redirect()->back()->with('success', 'Create product successfully.');
+
+        return redirect('/showProduct');
     }
     
     //View product and update
