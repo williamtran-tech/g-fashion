@@ -1,31 +1,28 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ojh65l');
-  src:  url('fonts/icomoon.eot?ojh65l#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ojh65l') format('truetype'),
-    url('fonts/icomoon.woff?ojh65l') format('woff'),
-    url('fonts/icomoon.svg?ojh65l#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ojh65l');
+    src: url('fonts/icomoon.eot?ojh65l#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?ojh65l') format('truetype'), url('fonts/icomoon.woff?ojh65l') format('woff'), url('fonts/icomoon.svg?ojh65l#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-logo:before {
-  content: "\e901";
-  /*color: #545657;*/
+    content: "\e901";
+    /*color: #545657;*/
 }
