@@ -33,6 +33,18 @@
             <label for="price">Product Price</label>
           </div>
           <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="edit_cost" name="cost" placeholder="Product Cost" required>
+            <label for="price">Product Cost</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="edit_quantity" name="quantity" placeholder="Product Quantity" required>
+            <label for="price">Product Quantity</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Description" id="edit_description" name="description" style="height: 100px" required></textarea>
+            <label for="floatingTextarea2">Description</label>
+          </div>
+          <div class="form-floating mb-3">
             <select class="form-select" id="edit_category-select" name="category" required>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
@@ -63,7 +75,9 @@
       <th scope="col">ID</th>
       <th scope="col"style="text-align:center;">Name</th>
       <th scope="col"style="text-align:center;">Price</th>
-      <th scope="col"style="text-align:center;">Detail</th>
+      <th scope="col"style="text-align:center;">Cost</th>
+      <th scope="col"style="text-align:center;">Quantity</th>
+      <th scope="col"style="text-align:center;">Description</th>
       <th scope="col"style="text-align:center;">Category</th>
       <th scope="col"style="text-align:center;">Function</th>
     </tr>
@@ -103,11 +117,12 @@
                 <th scope="row">'+product.id+'</th>\
                 <td style="text-align:center;">'+product.name+'</td>\
                 <td style="text-align:center;">'+product.price+'</td>\
-                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat natus omnis ea incidunt voluptas, quae suuga voluptates sapiente non dolore quam.</td>\
+                <td style="text-align:center;">'+product.cost+'</td>\
+                <td style="text-align:center;">'+product.quantity+'</td>\
+                <td>'+product.description+'</td>\
                 <td style="text-align:center;">'+product.category_name+'</td>\
                 <td style="text-align:center;">\
                 <button class="edit_product btn btn-warning" value="'+product.id+'">Update</button>\
-                <br><br>\
                 <button class="btn btn-danger" value="">Delete</button>\
                 </td>\
                 </tr>'
@@ -140,6 +155,9 @@
                 $('#edit_name').val(response.product.name);
                 $('#edit_slug').val(response.product.slug);
                 $('#edit_price').val(response.product.price);
+                $('#edit_cost').val(response.product.cost);
+                $('#edit_quantity').val(response.product.quantity);
+                $('#edit_description').val(response.product.description);
                 $('#edit_category-select').val(response.product.category_id);
               }
             }
@@ -155,6 +173,9 @@
             'name': $('#edit_name').val(),
             'slug': $('#edit_slug').val(),
             'price': $('#edit_price').val(),
+            'cost': $('#edit_cost').val(),
+            'quantity': $('#edit_quantity').val(),
+            'description': $('#edit_description').val(),
             'category_id': $('#edit_category-select').val()
           };
 

@@ -16,9 +16,13 @@ class ProductController extends Controller
     }
 
     public function productDetails(Product $product){
+<<<<<<< HEAD
         return view('product_detail', [
+=======
+        return view('users.product_detail', [
+>>>>>>> a34be9bd8956f20851c0eba383db34e106a2bf9d
             'product' => $product
-         ]);
+        ]);
     }
 
     //Admin functions
@@ -109,6 +113,9 @@ class ProductController extends Controller
                 $product->name = $request->name;
                 $product->slug = $request->slug;
                 $product->price = $request->price;
+                $product->cost = $request->cost;
+                $product->quantity = $request->quantity;
+                $product->description = $request->description;
                 $product->category_id = $request->category_id;
                 $product->update();
 
