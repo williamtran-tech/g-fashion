@@ -16,11 +16,7 @@ class ProductController extends Controller
     }
 
     public function productDetails(Product $product){
-<<<<<<< HEAD
-        return view('product_detail', [
-=======
         return view('users.product_detail', [
->>>>>>> a34be9bd8956f20851c0eba383db34e106a2bf9d
             'product' => $product
         ]);
     }
