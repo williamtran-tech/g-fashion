@@ -19,9 +19,9 @@ use App\Http\Controllers\ProductController;
 
 Route::get('products', [ProductController::class, 'allProducts']);
 
-Route::get('products/{product:slug}', [ProductController::class, 'productDetails']); //Product::where ('slug', $product)->first() | firstOrFail()
-
 Route::get('categories/{category:slug}',[ProductController::class, 'productByCategory'] );
+
+Route::get('products/{product:slug}',[ProductController::class, 'viewProductDetail'] );
 
 
 Route::get('create-product', function (Category $category) {

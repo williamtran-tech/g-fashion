@@ -23,33 +23,9 @@
                     
     
                 <div class="product_details col-5 ">
-                    {{-- <h3 class="product-title m-2 border-bottom" id="name">Nike Jordan</h3>
-                    <div class="rating border-bottom m-2">
-                        <div class="stars ">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <span class="review-no ">41 reviews</span>
-                    </div>
-                    <p class="product-description"></p>
-                    <h4 class="price border-bottom m-2">current price: <span id="price">$180</span></h4>
-                   
-                    <h5 class="sizes border-bottom m-2">sizes:
-                        <span class="size" data-toggle="tooltip" title="small">s</span>
-                        <span class="size" data-toggle="tooltip" title="medium">m</span>
-                        <span class="size" data-toggle="tooltip" title="large">l</span>
-                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-                    </h5>
-                    <h5 class="colors border-bottom">Colors:
-                        <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
-                        <span class="color green"></span>
-                        <span class="color blue"></span>
-                    </h5> --}}
+                    
                     <div>
-                        <h3 class="product-title p-2 border-bottom">Nike Jordan</h3>
+                        <h3 class="product-title p-2 border-bottom">{{$product->name}}</h3>
                     </div>
                     <div>
                         <h5 class="sizes p-2 border-bottom">
@@ -68,11 +44,11 @@
                     <div>
                         <h5 class="colors p-2 border-bottom">
                             Category: 
-                            <a href="/">Nike</a>
+                            <a href="/">{{$product->category->name}}</a>
                         </h5>
                     </div>
                     <div>
-                        <h5 class="price border-bottom p-2 ">Price: <span id="price">$180</span></h5>
+                        <h5 class="price border-bottom p-2 ">Price: <span id="price">{{$product->price}} $</span></h5>
                     </div>
                     <div class="action p-2 border-bottom">
                         <button class="add-to-cart btn btn-default" type="button">add to cart</button>

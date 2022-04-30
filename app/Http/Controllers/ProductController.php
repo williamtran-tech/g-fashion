@@ -28,6 +28,11 @@ class ProductController extends Controller
         ]);
     }
     
+    public function viewProductDetail(Product $product){
+        return view('users.product_detail', [
+            'product' => $product
+        ]);
+    }
     
     
     //View product and update

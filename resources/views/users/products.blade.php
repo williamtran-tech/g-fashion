@@ -64,7 +64,7 @@
                             <h5 class="card-title font-weight-bold" id="name">{!! $product->name !!}</h5>
                             <p class="card-text" id="price">Price: ${{$product->price}}</p>
                             <a href="/categories/{{$product->category->slug}}" class="card-text" id="price">Category: {{$product->category->name}}</a> 
-                            <a href="/product01" class="btn details px-auto" >Details</a><br />
+                            <a href="/products/{{$product->slug}}" class="btn details px-auto" >Details</a><br />
                             <a href="#" class="btn cart px-auto">ADD TO CART</a>
                         </div>
                     </div>
