@@ -142,6 +142,7 @@
                 <td style="text-align:center;">'+product.category_name+'</td>\
                 <td style="text-align:center;">\
                 <button class="edit_product btn btn-warning" value="'+product.id+'">Update</button>\
+                <br></br>\
                 <button class="delete_product btn btn-danger" value="'+product.id+'">Delete</button>\
                 </td>\
                 </tr>'

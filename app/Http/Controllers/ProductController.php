@@ -24,11 +24,6 @@ class ProductController extends Controller
         ]);
     }
 
-    public function productByCategory(Category $category){
-        return view('users.products', [
-            'products' => $category->products
-        ]);
-    }
     
     public function viewProductDetail(Product $product){
         return view('users.product_detail', [
@@ -36,16 +31,12 @@ class ProductController extends Controller
             'images' => ImagePath::where('product_id', $product->id)->get()
         ]);
     }
+    public function productByCategory(Category $category){
+        return view('users.products', [
+            'products' => $category->products
+        ]);
+    }
     
-    
-    //View product and update
-    // function viewProduct(){
-    //     return view('admin.products', [
-    //         'products' => Product::all(),
-    //         'categories' => Category::all()
-    //     ]);
-    // }
-
     function filterByCategory(Request $request){
         return view('admin.products', [
             'products' => Product::where('category_id', $request->category)->get(),
