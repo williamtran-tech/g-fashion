@@ -30,9 +30,9 @@ class ProductController extends Controller
     }
 
     function createProduct(Request $request){
-        $this->validate($request, [
-            'name' => 'required | max:2048| regex:/^[a-zA-Z]+$/u'
-        ]);
+        // $this->validate($request, [
+        //     'name' => 'required | max:2048| regex:/^[a-zA-Z]+$/u'
+        // ]);
 
         $product = new Product;
 
@@ -138,5 +138,14 @@ class ProductController extends Controller
                 ]);
             }
         // }
+    }
+
+    function destroyProduct($id){
+        $product = Product::find($id);
+        $product->delete();
+        return response()->json([
+            'status'=>200,
+            'message'=>"Product deleted successfully"
+        ]);
     }
 }

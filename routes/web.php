@@ -147,3 +147,6 @@ Route::post('create-product', [ProductController::class, 'createProduct']);
 //Update product route
 Route::get('update-product/{id}', [ProductController::class, 'editProduct']);
 Route::put('update-product/{id}', [ProductController::class, 'updateProduct']);
+
+//Delete product route
+Route::delete('delete-product/{id}', [ProductController::class, 'destroyProduct']);

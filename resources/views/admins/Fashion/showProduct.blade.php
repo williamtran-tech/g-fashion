@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<!-- Modal -->
+<!-- Update Modal -->
   <div class="modal fade" id="updateProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -67,12 +67,34 @@
   </div>
   {{-- END MODAL --}}
 
+  <!-- Delete Modal -->
+  <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">DELETE PRODUCT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating mb-3">
+            <input type="hidden" id="delete_product_id">
+            <h4>Are you sure to delete permenantly this product?</h4>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="delete_product_btn btn btn-danger">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{-- END MODAL --}}
+
     {{-- Minimal --}}
   <div id="success_message"></div>
   <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">ID</th>
       <th scope="col"style="text-align:center;">Name</th>
       <th scope="col"style="text-align:center;">Price</th>
       <th scope="col"style="text-align:center;">Cost</th>
@@ -114,8 +136,7 @@
             $.each(response.products, function(key, product){
               $('tbody').append(
                 '<tr>\
-                <th scope="row">'+product.id+'</th>\
-                <td style="text-align:center;">'+product.name+'</td>\
+                <td style="text-align:left;" value="'+product.name+'">'+product.name+'</td>\
                 <td style="text-align:center;">'+product.price+'</td>\
                 <td style="text-align:center;">'+product.cost+'</td>\
                 <td style="text-align:center;">'+product.quantity+'</td>\
@@ -123,7 +144,7 @@
                 <td style="text-align:center;">'+product.category_name+'</td>\
                 <td style="text-align:center;">\
                 <button class="edit_product btn btn-warning" value="'+product.id+'">Update</button>\
-                <button class="btn btn-danger" value="">Delete</button>\
+                <button class="delete_product btn btn-danger" value="'+product.id+'">Delete</button>\
                 </td>\
                 </tr>'
               )
@@ -216,8 +237,41 @@
             }
           });
         });
-      })
-    
-  
+
+          // Delete product 
+          $(document).on('click', '.delete_product', function(e){
+          e.preventDefault();
+          var prod_id = $(this).val();
+          // console.log(prod_id);
+          
+          $('#delete_product_id').val(prod_id);
+
+          $('#deleteProductModal').modal('show'); 
+        });
+
+        $(document).on('click', '.delete_product_btn', function(e){
+          e.preventDefault();
+          
+          var prod_id = $('#delete_product_id').val();
+          
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+            });
+
+          $.ajax({
+              type: "DELETE",
+              url: "/delete-product/"+prod_id,
+              success: function(response){
+                // console.log(response);
+                $('#success_message').addClass('alert alert-success');
+                $('#success_message').text(response.message);
+                $('#deleteProductModal').modal('hide');
+                fetchProduct();
+              }
+          });
+        });
+      }) 
 </script>
 @stop

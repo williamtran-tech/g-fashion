@@ -241,7 +241,13 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        
+//
+        ['header' => 'USER INTERFACE'],
+        [
+            'text' => 'Home Page',
+            'url'  => '/',
+            'icon' => 'fas fa-fw fa-book',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'Manage Admin',
