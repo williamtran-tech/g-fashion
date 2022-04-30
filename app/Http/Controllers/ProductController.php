@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\ImagePath;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\File;
+
 
 class ProductController extends Controller
 {
@@ -161,10 +163,20 @@ class ProductController extends Controller
             }
         // }
     }
-
+    
+    // Delete product 
     function destroyProduct($id){
         $product = Product::find($id);
         $product->delete();
+        
+        File::delete(public_path("cover/".$product->cover_img));
+        
+        $images = ImagePath::where('product_id', $id)->get();
+        foreach($images as $image){
+            File::delete(public_path("images/".$image->image));
+            $image->delete();
+        }
+
         return response()->json([
             'status'=>200,
             'message'=>"Product deleted successfully"
