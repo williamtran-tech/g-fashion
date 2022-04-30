@@ -58,7 +58,7 @@
         @foreach ($products as $product)
         <div class="col-3">
             <div class='container-fluid'>
-                <div class="card mx-auto col-md-3 col-10 mt-5"> <img class='mx-auto img-thumbnail' src="{{$product->image_paths}}" width="auto" height="auto" />
+                <div class="card mx-auto col-md-3 col-10 mt-5"> <img class='mx-auto img-thumbnail' src="cover/{{$product->cover_img}}" width="auto" height="auto" />
                     <div class="card-body text-center mx-auto">
                         <div class='cvp'>
                             <h5 class="card-title font-weight-bold" id="name">{!! $product->name !!}</h5>

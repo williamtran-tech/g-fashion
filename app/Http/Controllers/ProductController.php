@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\ImagePath;
 use Illuminate\Http\Request;
 
 
@@ -27,35 +28,7 @@ class ProductController extends Controller
         ]);
     }
     
-    //Admin functions
-    //Create new product
-    function creatingProduct(){
-        return view('admins.Fashion.createNewProduct', [
-            'categories' => Category::all()
-        ]);
-    }
-
-    function createProduct(Request $request){
-        // $this->validate($request, [
-        //     'name' => 'required | max:2048| regex:/^[a-zA-Z]+$/u'
-        // ]);
-
-        $product = new Product;
-
-        //Insert data from form to database
-        $product->name = $request->name;
-        $product->slug = $request->slug;
-        $product->price = $request->price;
-        $product->cost = $request->cost;
-        $product->quantity = $request->quantity;
-        $product->description = $request->description;
-        $product->category_id = $request->category;
-        $product->save();
-
-        // return redirect()->back()->with('success', 'Create product successfully.');
-
-        return redirect('/showProduct');
-    }
+    
     
     //View product and update
     // function viewProduct(){
@@ -72,7 +45,7 @@ class ProductController extends Controller
         ]);
     }
 
-    //Admin page
+    //ADMIN PAGE
     function viewProducts(){
         return view('admins.Fashion.showProduct', [
             // 'products' => Product::all(),
@@ -89,6 +62,49 @@ class ProductController extends Controller
         ]);
     }
 
+    //Admin functions
+    //Create new product
+    function creatingProduct(){
+        return view('admins.Fashion.createNewProduct', [
+            'categories' => Category::all()
+        ]);
+    }
+
+    function createProduct(Request $request){
+        if($request->hasFile('cover_img')!=null){
+            $file = $request->file('cover_img');
+            $imageName = time().'_'.$file->getClientOriginalName();
+            $file->move(\public_path("cover/"),$imageName);
+
+            $product = new Product;
+
+            //Insert data from form to database
+            $product->name = $request->name;
+            $product->slug = $request->slug;
+            $product->price = $request->price;
+            $product->cost = $request->cost;
+            $product->quantity = $request->quantity;
+            $product->description = $request->description;
+            $product->category_id = $request->category;
+            $product->cover_img = $imageName;
+            
+            $product->save();
+        }
+
+        if ($request->hasFile('images')!=null){
+            $files = $request->file("images");
+            foreach($files as $file){
+                $imageName = time().'_'.$file->getClientOriginalName();
+                $request['product_id'] = $product->id;
+                $request['image'] = $imageName;
+                $file->move(\public_path("/images"),$imageName);
+                ImagePath::create($request->all());
+            }
+        }
+        
+        return redirect('/showProduct');
+    }
+    
     function editProduct($id){
         $product = Product::find($id);
         if ($product){

@@ -95,6 +95,7 @@
   <table class="table">
   <thead class="thead-dark">
     <tr>
+      <th scope="col"style="text-align:center;">Image</th>
       <th scope="col"style="text-align:center;">Name</th>
       <th scope="col"style="text-align:center;">Price</th>
       <th scope="col"style="text-align:center;">Cost</th>
@@ -136,6 +137,7 @@
             $.each(response.products, function(key, product){
               $('tbody').append(
                 '<tr>\
+                <td><img src="cover/'+product.cover_img+'" class="img-responsive" style="max-height:100px; max-width:100px" alt="" srcset=""></td>\
                 <td style="text-align:left;" value="'+product.name+'">'+product.name+'</td>\
                 <td style="text-align:center;">'+product.price+'</td>\
                 <td style="text-align:center;">'+product.cost+'</td>\

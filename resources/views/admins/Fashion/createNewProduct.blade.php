@@ -8,7 +8,7 @@
 
 @section('content')
     {{-- Minimal --}}
-  <form style="margin-left: 100px; margin-right:100px; margin-top:50px" method="POST" action="create-product">
+  <form style="margin-left: 100px; margin-right:100px; margin-top:50px" method="POST" action="create-product" enctype="multipart/form-data">
     @csrf
     <div class="form-group row">
       <label for="inputName" class="col-sm-3 col-form-label">Product Name</label>
@@ -54,6 +54,18 @@
             <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
       </select>
+    </div>
+    <div class="form-group row">
+      <label for="inputDetail" class="col-sm-3 col-form-label">Cover image</label>
+      <div class="col-sm-7">
+        <input type="file" class="form-control" id="inputCover" name="cover_img">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputDetail" class="col-sm-3 col-form-label">Images</label>
+      <div class="col-sm-7">
+        <input type="file" class="form-control" id="images" name="images[]" multiple>
+      </div>
     </div>
     <div class="form-group row">
       <div class="col-sm-3">

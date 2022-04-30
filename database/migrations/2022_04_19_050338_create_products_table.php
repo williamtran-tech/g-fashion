@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('cost');
             $table->text('description');
             $table->integer('quantity');
+            $table->text('cover_img');
             $table->timestamps();
         });
     }
