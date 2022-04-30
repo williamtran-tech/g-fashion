@@ -32,7 +32,8 @@ class ProductController extends Controller
     
     public function viewProductDetail(Product $product){
         return view('users.product_detail', [
-            'product' => $product
+            'product' => $product,
+            'images' => ImagePath::where('product_id', $product->id)->get()
         ]);
     }
     

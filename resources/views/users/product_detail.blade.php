@@ -1,27 +1,25 @@
 @extends('layouts.master_layout')
-@extends('layouts.product_detail_layout')
+{{-- @extends('layouts.product_detail_layout') --}}
+
+@section('title')
+<title>Product Detail | {{$product->name}}</title>
+@endsection
+
 @section('product_detail')
-<div class="container ">
+<div class="container pt-5">
     <div class="card_detail ">
         <div class="container-fliud ">
             <div class="wrapper row">
                 <div class="col-2 ">
                     <ul class="nav-tab">
-                        <li><a data-target="#pic-2" data-toggle="tab"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></a></li>
-                        <li><a data-target="#pic-3" data-toggle="tab"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></a></li>
-                        <li><a data-target="#pic-4" data-toggle="tab"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></a></li>
+                        @foreach ($images as $image)
+                            <li style="list-style: none;"><a data-target="#pic-1" data-toggle="tab"><img src="/images/{{$image->image}}" width="110%"/></a></li>    
+                        @endforeach
                     </ul>
                 </div>
                 <div class="preview-pic col-4 tab-content">
-                    <div class="tab-pane active" id="pic-1"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></div>
-                    <div class="tab-pane" id="pic-2"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></div>
-                    <div class="tab-pane" id="pic-3"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></div>
-                    <div class="tab-pane" id="pic-4"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></div>
-                    <div class="tab-pane" id="pic-5"><img src="https://glab.vn/storage/products/2022/04/09/480x320/6251589f43d8f.jpg" /></div>
+                    <div class="tab-pane active"><img src="/cover/{{$product->cover_img}}" width="100%"/></div>
                 </div>
-                    
-                    
-    
                 <div class="product_details col-5 ">
                     
                     <div>
@@ -39,19 +37,19 @@
                         <h5 class="colors ">
                             Description:
                         </h5>
-                        <p>This is a shoe</p>
+                        <p>{{$product->description}}</p>
                     </div>
                     <div>
                         <h5 class="colors p-2 border-bottom">
                             Category: 
-                            <a href="/">{{$product->category->name}}</a>
+                            <a href="/" style="text-decoration: none; color:black;">{{$product->category->name}}</a>
                         </h5>
                     </div>
                     <div>
                         <h5 class="price border-bottom p-2 ">Price: <span id="price">{{$product->price}} $</span></h5>
                     </div>
                     <div class="action p-2 border-bottom">
-                        <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                        <button class="add-to-cart btn" type="button" style="background-color:rgb(129, 7, 5); color: white;">Add to Cart</button>
                         <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
                     </div>
                 </div>

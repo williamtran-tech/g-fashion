@@ -48,10 +48,10 @@ Route::get('product', function () {
     return view('users.product');
 });
 
-//Product detail
-Route::get('product01', function () {
-    return view('users.product_detail');
-});
+// //Product detail
+// Route::get('product01', function () {
+//     return view('users.product_detail');
+// });
 
 //Cart
 Route::get('/cart', function () {

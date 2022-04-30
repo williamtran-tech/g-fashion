@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	@yield('title')
     <title></title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -25,67 +26,56 @@
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 </head>
 <body>
-    <div class="injoy_megamenu" id="fullmenu">
-
+    <div class="injoy_megamenu" id="fullmenu" style="background-color: rgb(63, 13, 12);">
 		<div class="navbar navbar-expand-xl shadow-sm injoy_header">
-			
 			<div class="container-fluid p-0 m-0">
-
 				<div class="navbar-collapse collapse p-0 m-0 row">
-
 					<!-- START: Menu Text Links -->
-					
 					<ul class="nav navbar-nav side_pane col">
-
-						<li class="nav-item">
-							<a href="/" class="menu_text add_margin">HOME</a>
+						<li class="nav-item ms-3">
+							<a href="/" class="menu_text add_margin" style="text-decoration:none; color: white;">HOME</a>
 						</li>
 
-						<li class="nav-item">
-							<a href="" class="menu_text add_margin">CONTACT</a>
+						<li class="nav-item ms-3">
+							<a href="" class="menu_text add_margin" style="text-decoration:none; color: white;">CONTACT</a>
 						</li>
 
-						<!-- DROPDOWN: Shop Products-->
-						<li class="dropdown menu-large nav-item">
-							<a href="/products" class="menu_text"  >PRODUCT</a>
+						<li class="nav-item ms-3">
+							<a href="/products" class="menu_text add_margin" style="text-decoration:none; color: white;">PRODUCT</a>
 						</li>
 					</ul>
 					<!-- END: Menu Text Links -->
-
-
 					<!-- Navbar brand -->
 					{{-- <div class="nav navbar-nav col justify-content-center">
 							<a class="" href="/"><h1 class="brand_logo font-weight-bolder" href="/">G Fashion</h1></a>
 					</div> --}}
 					<div class="col logo_brand d-flex justify-content-center" >
-						<a class="" href="/"><h1>G Fashion</h1></a>
+						<a class="" href="/" style="text-decoration:none; color: white;"><h1>G Fashion</h1></a>
 					</div>
 					<!-- START: Menu Icons Links -->
 					<ul class="nav navbar-nav ml-5  col justify-content-end">
 						<li class="ml-auto">
 							<ul class="nav navbar-nav">
 								<li class="nav-item">
-									<a href="" class="nav-link m-2 menu_icon" style="cursor: pointer;"><i class="fa-solid fa-cart-shopping"></i></a>
+									<a href="" class="nav-link m-2 menu_icon" style="cursor: pointer; color: rgb(255, 255, 255);"><i class="fa-solid fa-cart-shopping"></i></a>
 								</li>
 								<li class="dropdown menu-large nav-item">
-                                    <a href="/register" class="nav-link m-2 menu_icon" style="cursor: pointer;"><i class="fa-solid fa-user"></i></a>
+                                    <a href="/register" class="nav-link m-2 menu_icon" style="cursor: pointer; color: rgb(255, 255, 255);"><i class="fa-solid fa-user"></i></a>
 								</li>
 							</ul>
 						</li>
 					</ul>
 					<!-- END: Menu Icons Links -->
 				</div>
-
-				</div>
+			</div>
 		</div>
 	</div>
 
     @yield('landing_page')
-   
-	{{-- Admin section --}}
-	@yield('create_product')
-	@yield('admin_product')
-	<footer class="text-white text-center text-lg-start footer">
+	
+	@yield('product_detail')
+	
+	<footer class="text-white text-center text-lg-start footer" style="background-color:rgb(63, 13, 12); margin-top:50px;">
 		<!-- Grid container -->
 		<div class="container p-4">
 		  <!--Grid row-->
@@ -175,8 +165,8 @@
 		</div>
 		<!-- Copyright -->
 	  </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/cart.js"></script>
 
 @yield('menu_js')
