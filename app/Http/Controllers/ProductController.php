@@ -21,6 +21,12 @@ class ProductController extends Controller
         ]);
     }
 
+    public function productByCategory(Category $category){
+        return view('users.products', [
+            'products' => $category->products
+        ]);
+    }
+    
     //Admin functions
     //Create new product
     function creatingProduct(){

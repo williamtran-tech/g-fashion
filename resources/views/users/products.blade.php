@@ -1,6 +1,5 @@
 @extends('layouts.master_layout')
 @extends('layouts.product_layout')
-
 @section('filter')
 <div class="carousel slide">
     <!-- The Slideshow -->

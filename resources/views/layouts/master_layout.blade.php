@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title></title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -47,25 +47,7 @@
 
 						<!-- DROPDOWN: Shop Products-->
 						<li class="dropdown menu-large nav-item">
-							
-							<a href="#" class="menu_text" data-toggle="dropdown" id="dropdownShop" data-bs-toggle="dropdown">PRODUCT</a>
-							
-							<div class="dropdown-menu megamenu p-0 m-0" aria-labelledby="dropdownShop">
-						
-									<div class="row mx-auto menu_wrapper justify-content-center">
-                                            <div class="col-2 text-center">
-                                                <a href="/product"> <h4>Adidas</h4></a>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <a href=""> <h4>Nike</h4></a>
-                                            </div>
-                                            <div class="col-2 text-center">
-                                                <a href=""> <h4>Others</h4></a>
-                                            </div>
-									</div>
-							
-							</div>
-
+							<a href="/products" class="menu_text"  >PRODUCT</a>
 						</li>
 					</ul>
 					<!-- END: Menu Text Links -->
@@ -92,8 +74,6 @@
 						</li>
 					</ul>
 					<!-- END: Menu Icons Links -->
-
-
 				</div>
 
 				</div>
@@ -101,7 +81,7 @@
 	</div>
 
     @yield('landing_page')
-
+   
 	{{-- Admin section --}}
 	@yield('create_product')
 	@yield('admin_product')

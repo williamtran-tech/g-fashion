@@ -21,32 +21,8 @@ Route::get('products', [ProductController::class, 'allProducts']);
 
 Route::get('products/{product:slug}', [ProductController::class, 'productDetails']); //Product::where ('slug', $product)->first() | firstOrFail()
 
-Route::get('categories/{category:slug}', function (Category $category){
-    return view('products', [
-        'products' => $category->products
-    ]);
-});
+Route::get('categories/{category:slug}',[ProductController::class, 'productByCategory'] );
 
-// Route::get('/', function () {
-//     return view('users.landing_page');
-// });
-
-// Route::get('/login', function () {
-//     return view('users.login');
-// });
-
-// Route::get('register', function () {
-//     return view('register');
-// });
-// Route::get('product', function () {
-//     return view('product');
-// });
-// Route::get('product01', function () {
-//     return view('users.product_detail');
-// });
-// Route::get('cart', function () {
-//     return view('cart');
-// });
 
 Route::get('create-product', function (Category $category) {
     return view('admin.create_product', [
