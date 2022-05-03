@@ -5,6 +5,7 @@ use App\Models\Category;
 use App\Models\ImagePath;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,10 +41,7 @@ Route::get('/login', function () {
     return view('users.login');
 });
 
-//Register page
-Route::get('register', function () {
-    return view('users.register');
-});
+
 Route::get('product', function () {
     return view('users.product');
 });
@@ -126,3 +124,7 @@ Route::put('update-product/{id}', [ProductController::class, 'updateProduct']);
 
 //Delete product route
 Route::delete('delete-product/{id}', [ProductController::class, 'destroyProduct']);
+
+//REGISTER
+Route::get('register', [RegisterController::class, 'create']);
+Route::post('/register', [RegisterController::class, 'store']);

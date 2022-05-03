@@ -26,6 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 </head>
 <body>
+	
     <div class="injoy_megamenu" id="fullmenu" style="background-color: rgb(63, 13, 12);">
 		<div class="navbar navbar-expand-xl shadow-sm injoy_header">
 			<div class="container-fluid p-0 m-0">
@@ -74,7 +75,7 @@
     @yield('landing_page')
 	
 	@yield('product_detail')
-	
+
 	<footer class="text-white text-center text-lg-start footer" style="background-color:rgb(63, 13, 12); margin-top:50px;">
 		<!-- Grid container -->
 		<div class="container p-4">
@@ -165,6 +166,7 @@
 		</div>
 		<!-- Copyright -->
 	  </footer>
+	  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/cart.js"></script>
