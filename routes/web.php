@@ -6,6 +6,7 @@ use App\Models\ImagePath;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,5 +127,10 @@ Route::put('update-product/{id}', [ProductController::class, 'updateProduct']);
 Route::delete('delete-product/{id}', [ProductController::class, 'destroyProduct']);
 
 //REGISTER
-Route::get('register', [RegisterController::class, 'create']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest'); //This will redirect to home page if the user have already sign in (Provider.RouteServiceProvider) 
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
+
+Route::get('login', [SessionController::class, 'create'])->middleware('guest');
+Route::post('login', [SessionController::class, 'store'])->middleware('guest');
+
+Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');

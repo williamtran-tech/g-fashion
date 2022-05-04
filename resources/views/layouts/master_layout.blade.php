@@ -55,7 +55,28 @@
 					</div>
 					<!-- START: Menu Icons Links -->
 					<ul class="nav navbar-nav ml-5  col justify-content-end">
-						<li class="ml-auto">
+						<li class="nav-item me-3 mt-2">
+							<a href="" style="cursor: pointer; color: rgb(255, 255, 255);"><i class="fa-solid fa-cart-shopping"></i></a>
+						</li>
+						{{-- guest helper -> if(auth()->check() --}}
+						
+						@guest 
+							<li class="nav-item ms-3 mt-2">
+								<a href="/login" class="menu_text add_margin" style="text-decoration:none; color: white;">LOGIN</a>
+							</li>
+						@else
+							<li class="nav-item ms-3 mt-2">
+								<span class="menu_text bold" style="color: white;  text-transform: uppercase;">Welcome, {{auth()->user()->name}}!</span>
+							</li>
+
+							<form action="/logout" method="POST">
+								@csrf
+								<button type="submit" class="btn menu_text add_margin ms-4" style="background-color:rgb(157, 0, 0); color: white; border-radius: 10px;">LOGOUT</button>
+							</form>
+							
+						@endguest
+						
+						{{-- <li class="ml-auto">
 							<ul class="nav navbar-nav">
 								<li class="nav-item">
 									<a href="" class="nav-link m-2 menu_icon" style="cursor: pointer; color: rgb(255, 255, 255);"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -64,13 +85,16 @@
                                     <a href="/register" class="nav-link m-2 menu_icon" style="cursor: pointer; color: rgb(255, 255, 255);"><i class="fa-solid fa-user"></i></a>
 								</li>
 							</ul>
-						</li>
+						</li> --}}
 					</ul>
 					<!-- END: Menu Icons Links -->
 				</div>
 			</div>
 		</div>
 	</div>
+
+	@yield('login')
+	@yield('register')
 
     @yield('landing_page')
 	

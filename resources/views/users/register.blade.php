@@ -1,5 +1,9 @@
 @extends('layouts.master_layout')
-@extends('layouts.sign_up_layout')
+
+@section('title')
+    <title>G Fashion | Register</title>
+@endsection
+
 @section('register')
 
 <section class="vh-100" style="background-color: #eee;">
